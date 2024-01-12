@@ -1,6 +1,6 @@
 let cars = [
-    { brand: 'Honda', price: 13000 },
-    { brand: 'Rolls-Royce', price: 120000 }
+    { brand: 'Honda', price: 13000, fullname: 'Bobby Enomate'},
+    { brand: 'Rolls-Royce', price: 120000, fullname: 'kola Enomate'}
 ];
 
 const carInfo = (arr) => {
@@ -16,4 +16,16 @@ const carInfo = (arr) => {
     
 };
 
+const priceIncrement = (arr) => {
+    const newArr = arr.map((car) => {
+        car.price = car.price * 2;
+        delete car["brand"];
+        car.firstname = car.fullname.split(" ")[0]
+        delete car["fullname"];
+        return {...car, model: "Toyota"}
+    });
+    console.log(newArr);
+}
+
 carInfo(cars);
+priceIncrement(cars);
