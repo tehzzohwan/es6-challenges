@@ -1,5 +1,6 @@
 let greeting = (() => {
-    var hello = "How are you doing";
+    let hello = "How are you doing";
+
     const greet = (name) => {
         return `${hello} ${name}`;
     }
